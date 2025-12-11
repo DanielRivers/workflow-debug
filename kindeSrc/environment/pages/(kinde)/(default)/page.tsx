@@ -8,10 +8,11 @@ import React from "react";
 import { renderToString } from "react-dom/server.browser";
 import { getEnvironmentVariable } from '@kinde/infrastructure'
 
-// export const publicUrl = getEnvironmentVariable('APP_PUBLIC_URL').value
+// export const publicUrl = 
 
 
 const DefaultPage: React.FC<KindePageEvent> = ({ context, request }) => {
+  console.log(getEnvironmentVariable('APP_PUBLIC_URL').value)
   return (
     <Root context={context} request={request}>
       <DefaultLayout>
